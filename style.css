@@ -1,0 +1,130 @@
+:root {
+    --fs-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: var(--fs-xxl);
+    line-height: var(--fs-xxl);
+}
+
+.navbar {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: xx-large;
+    margin-top: -8px;
+}
+
+.dropdown-menu {
+    min-width: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.301);
+}
+
+img {
+    max-width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+.card {
+    border: none;
+}
+
+.dropdown-item {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    img {
+        min-width: 1em;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+#mobile-hero-image,
+.mobile-h1,
+.mobile-text,
+.carousel {
+    display: none;
+}
+
+#desktop-hero-image,
+.desktop-h1,
+.desktop-text,
+.logo {
+    display: block;
+}
+
+.card-text {
+    width: 70%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    a {
+        width: min-content;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    .card-deck {
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: var(--fs-xl);
+    }
+
+    .card-body,
+    .card-deck {
+        margin: 10px !important;
+        padding: 10px !important;
+    }
+
+    #desktop-hero-image,
+    .desktop-h1,
+    .desktop-text,
+    .logo {
+        display: none !important;
+    }
+
+    #mobile-hero-image,
+    .mobile-h1,
+    .mobile-text,
+    .carousel {
+        display: block;
+    }
+
+    .card-body {
+        text-align: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo svg {
+        max-height: 2em;
+        max-width: 3em;
+    }
+
+    .carousel img {
+        height: 5em;
+        width: 8em !important;
+        margin-inline: auto;
+    }
+
+    .card-text {
+        width: 100%;
+    }
+}
